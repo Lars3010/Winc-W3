@@ -43,7 +43,7 @@ const getRandomQuote = async () => {
     try{
         const res = await fetch('https://tronalddump.io/random/quote', {method: 'GET'});
         const json = await res.json();
-        console.log(json);
+        clearContainer();
         const quote = document.createElement('blockquote');
         const textnode = document.createTextNode(json.value);
         quote.appendChild(textnode);
